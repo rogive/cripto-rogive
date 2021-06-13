@@ -8,6 +8,10 @@ var api_key = process.env.KEY_BUDA;
 var api_secret = process.env.SECRET_BUDA;
 var privateBuda = new Buda(api_key, api_secret);
 
+app.get('/',(req,res) => {
+  res.send("This is a crypto app")
+})
+
 app.get('/markets/:id', (req, res) => {
   const { id } = req.params;
   console.log('id: ', id);
